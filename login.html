@@ -17,7 +17,13 @@
 </head>
 
 <body>
-
+    <style>
+        .maplink {
+            direction: none;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
     <header>
         <nav>
             <div id="logo">
@@ -57,9 +63,9 @@
                     </div>
                 </div>
                 <form class="login-form ">
-                    <input type="email " placeholder="Email " required />
-                    <input type="password " placeholder="Password " required />
-                    <button>login</button>
+                    <input type="email" placeholder="Email " required />
+                    <input type="password" placeholder="Password " required />
+                    <button><a href="maps.html" class="maplink">login</a></button>
                     <p class=" message ">Not registered? <a href="signup.html">Create an account</a></p>
                 </form>
             </div>
