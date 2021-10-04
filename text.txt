@@ -1,0 +1,9 @@
+let locations = [
+  ["Bellandur, Banglore", 12.93085700, 77.67911100, 1],
+  ["Internal HSR, Banglore", 12.93149600, 77.67884500, 2],
+  ["Internal HSR, Banglore", 12.93166500, 77.67855100, 3],
+  ["Internal Sarjapur, Bangalore", 12.93179600,77.67883600, 4],
+  ["Internal HSR, Banglore", 12.93149600, 77.67884500, 5],
+  ["Internal HSR, Bangalore", 12.93118100, 77.67896100, 6],
+  ["Internal Sarjapur, Bangalore", 12.93118100, 77.67896100, 7],
+];
