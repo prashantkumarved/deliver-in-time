@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <title>Food delivery Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/maps.css">
 
-    <title>signup page</title>
+
 </head>
+<style>
+    #map {
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+        ;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #top {
+        padding-top: 8vw;
+    }
+    
+    .h1 {
+        margin: 5px 0;
+    }
+</style>
 
 <body>
-
     <header>
         <nav>
             <div id="logo">
-                <a href="index.html"><img src="resources/logo.jpg" alt=""></a>
+                <a href="/"><img src="resources/logo.jpg" alt=""></a>
             </div>
             <ul class="nav-links">
                 <!-- <li><a href="index.html"> HOME</a></li> -->
-                <li> <a href="index.html">Home</a> </li>
-                <li> <a href="/events">About Us</a> </li>
+                <li> <a href="/resources">Home</a> </li>
+                <li> <a href="#middle-body">About Us</a> </li>
                 <li> <a href="contactus.html">Contact Us</a> </li>
-                <li> <a href="/teams">Sign in</a> </li>
+                <!-- <li> <a href="login.html">Sign in</a> </li> -->
             </ul>
 
             <div class="burger">
@@ -37,37 +60,12 @@
                 <div class="line3"></div>
             </div>
         </nav>
-
     </header>
 
-
-    <div class="container ">
-
-        <div class="login ">
-
-            <div class="form ">
-                <div class="login ">
-                    <div class="login-header ">
-                        <div class="imgcontainer ">
-                            <img src="resources/logo1.png " alt=" " class="logoimg ">
-                        </div>
-                        <p id="text" class="pb-3">
-                            Please enter your credentials to login.
-                        </p>
-                    </div>
-                </div>
-                <form class="login-form ">
-                    <input type="email " placeholder="Email " required />
-                    <input type="password " placeholder="Password " required />
-                    <button>login</button>
-                    <p class=" message ">Not registered? <a href="signup.html">Create an account</a></p>
-                </form>
-            </div>
-        </div>
-        </form>
-
+    <div class="my-2 text-center " id="top">
+        <h1 class="h1">Food Delivery Tracker</h1>
     </div>
-
+    <div id="map"></div>
 
     <footer id="footer" class="footer-1">
         <div class="main-footer widgets-dark typo-light">
@@ -143,9 +141,11 @@
         </div>
     </footer>
 
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 
-    <script src="scripts/home.js "></script>
-
+    <script src="scripts/Jscript.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8iAE6QM2J8X7-23K6Q0_ahfP910ee0TA&callback=initMap&v=weekly" async></script>
 </body>
 
 </html>
